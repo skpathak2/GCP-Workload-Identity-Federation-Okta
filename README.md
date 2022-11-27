@@ -53,7 +53,7 @@ Before you begin, verify that your external IdP meets the following requirements
 
 If your IdP meets these criteria, do the following:
 
-*   OIDC (<mark>We will be using this in the DEMO</mark>)
+*   OIDC (`We will be using this in the DEMO`)
 
     Configure Okta IdP so that your workload can obtain ID tokens
         
@@ -162,7 +162,7 @@ use a [dedicated project to manage workload identity pools and providers](https:
         Optionally, you can [map additional attributes](https://cloud.google.com/iam/docs/workload-identity-federation#mapping).
         You can then refer to these attributes when granting access to resources.
 
-        *   OIDC (<mark>This is by default configured in Okta Application Please Skip to ""</mark>)
+        *   OIDC (`This is by default configured in Okta Application Please Skip to "Authenticate a workload"`)
 
             Your attribute mappings can use the claims embedded in the ID token or
             access token issued by the external IdP.
@@ -213,7 +213,7 @@ defines the following:
 
 
 +   **File-sourced credentials**: The libraries read the external credential
-    from a local plain text or JSON file(<mark>We will use this in the Demo</mark>). For example:
+    from a local plain text or JSON file(`We will use this in the Demo`). For example:
 
     *   JSON 
 
@@ -247,7 +247,7 @@ available at [here](https://google.aip.dev/auth/4117).
 
 To create a credential configuration file, do the following:
 
-*   File-sourced credentials (<mark>We will use this in this Demo</mark>)
+*   File-sourced credentials (``We will use this in this Demo``)
 
     <pre >
     gcloud iam workload-identity-pools create-cred-config \
