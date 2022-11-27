@@ -300,6 +300,17 @@ cd GCP-Workload-Identity-Federation-Okta/examples
 ```
 
 2. Select the directory `Python` or `Java` based on your use case updates the variables and run/compile the code.
+    > Java Code
+
+    ```
+    cd GCP-Workload-Identity-Federation-Okta/examples/JavaCode/src/main/java/com/gcp/
+    ```
+    > Python Code
+
+    ```
+    cd GCP-Workload-Identity-Federation-Okta/examples/PythonCode/
+    ```
+
 
 
 ## Next Steps
