@@ -177,6 +177,8 @@ use a [dedicated project to manage workload identity pools and providers](https:
 
 In this demo we will use a `Python` and `Java` based code located under `examples folder` which uses `google-auth` and `Cloud Client` Libraries.
 
+Credits:- Python Script is based on the ove provided under [Google Cloud Workload Identity Federation with Okta](https://medium.com/google-cloud/google-cloud-workload-identity-federation-with-okta-90c05b985b17)
+
 
 ### Create a credential configuration
 
@@ -225,7 +227,7 @@ available at [here](https://google.aip.dev/auth/4117).
 
 To create a credential configuration file, do the following:
 
-*   File-sourced credentials
+*   File-sourced credentials (<mark>We will use this in this Demo</mark>)
 
     <pre >
     gcloud iam workload-identity-pools create-cred-config \
@@ -268,6 +270,16 @@ following:
 
 2.  Use a client library or tool that supports workload identity federation and can
     [find credentials automatically](https://cloud.google.com/docs/authentication/client-libraries):
+
+
+## Run the sample code
+
+1. Navigate to `examples` directory
+```
+cd GCP-Workload-Identity-Federation-Okta/examples
+```
+
+2. Select the directory `Python` or `Java` based on your use case updates the variables and run/compile the code.
 
 
 ## Next Steps
