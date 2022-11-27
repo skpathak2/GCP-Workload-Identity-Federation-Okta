@@ -55,17 +55,37 @@ If your IdP meets these criteria, do the following:
 
 *   OIDC (<mark>We will be using this in the DEMO</mark>)
 
-    Configure Okta IdP so that your workload can obtain ID tokens 
+    Configure Okta IdP so that your workload can obtain ID tokens
+        
+         * Create a Authorization Server on Okta Side
+            1. Login to Okta admin console
+            2. Go to Security->API
+            3. Authorization Server
+            4. Define a new authorization server , note the issuer URL — 
+               you’ll need this to configure OIDC provider in Google Cloud 
+               and in the example code.
+            5. Set audience (could be anything that is mutually verifiable, 
+               preferably unique), note the audience — you’ll need this to 
+               configure OIDC provider in Google Cloud
+            6. Define a new scope, set this scope as a default scope
+            7. Define a new claim. Customize this claim to your requirement 
+               of attribute verification in Google Cloud
+            8. Go to access policies, make sure its Assigned to “All 
+               Clients”
+         
+         * Create a WebApp on Okta Side
 
-        1. In the Okta Admin Console, go to Applications > Applications.
-        2. Click Create App Integration.
-        Select OIDC - OpenID Connect as the Sign-in method.
-        3. Select Web Application as the Application type, then click Next.
-        4. Specify the App integration name.
-        5. Grant Type:- Client Credentials
-        6. Controlled access:- Allow everyone in your organization to access
-        7. Save
-        8. Fetch Client ID and Client Secret, Which we will use in HTTP Post Call.
+            1. In the Okta Admin Console,Go to Applications > Applications.
+            2. Click Create App Integration.
+               Select OIDC - OpenID Connect as the Sign-in method.
+            3. Select Web Application as the Application type, then click 
+               Next.
+            4. Specify the App integration name.
+            5. Grant Type:- Client Credentials
+            6. Controlled access:- Allow everyone in your organization to access
+            7. Save
+            8. Fetch Client ID and Client Secret, Which we will use in HTTP
+               Post Call.
 
     Note: Workload identity federation doesn't support opaque tokens or
     [token introspection](https://datatracker.ietf.org/doc/html/rfc7662)

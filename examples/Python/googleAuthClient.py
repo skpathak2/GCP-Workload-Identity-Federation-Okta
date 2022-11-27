@@ -40,7 +40,7 @@ def get_okta_token():
     data = {'grant_type': 'client_credentials'}
     
 
-    response = requests.post('https://dev-77608005.okta.com/oauth2/aus7d77jbioOzfeXe5d7/v1/token',
+    response = requests.post('<Okta Web App end Point/Issuer URI>/v1/token',
                              headers=headers, cookies=cookies, data=data)
     response.raise_for_status()
     print("Creating Okta token file")
