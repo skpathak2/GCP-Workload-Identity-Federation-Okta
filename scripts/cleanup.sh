@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update the variables below
-srvcacct="oktasvcacct@yadavaja-sandbox.iam.gserviceaccount.com"
+srvcacct="oktasvcacct@ymygcpproj.iam.gserviceaccount.com"
 wrkldidpoolname="workload-if-okta-pool"
 
 
