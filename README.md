@@ -304,4 +304,6 @@ cd GCP-Workload-Identity-Federation-Okta/examples
 
 ## Next Steps
 
-Read more about Workload Identity Federation [here](https://cloud.google.com/iam/docs/workforce-identity-federation#whats_next)
+* If this is for POC please use `GCP-Workload-Identity-Federation-Okta/scripts/cleanup.sh` to clean the resources created under GCP Project.
+
+* Read more about Workload Identity Federation [here](https://cloud.google.com/iam/docs/workforce-identity-federation#whats_next)
