@@ -272,7 +272,7 @@ following:
     [find credentials automatically](https://cloud.google.com/docs/authentication/client-libraries):
 
 
-## Run the sample code
+### Run the sample code
 
 1. Navigate to `examples` directory
 ```
