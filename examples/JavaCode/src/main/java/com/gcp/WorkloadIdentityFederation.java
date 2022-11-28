@@ -35,7 +35,7 @@ public class WorkloadIdentityFederation {
 
     public static void main(String[] args) {
 
-        // Set Env Var Below
+        // Set Env Var Below for passing client-config.json
         // GOOGLE_APPLICATION_CREDENTIALS=GOOGLE_APPLICATION_CREDENTIALS=src/main/java/com/gcp/client-config.json
 
         // Instantiate the Class and call GetOktaToken() & listBuckets() methods

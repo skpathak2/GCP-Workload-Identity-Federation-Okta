@@ -11,6 +11,10 @@ from pprint import pprint
 import requests
 import json
 import base64
+
+# Update the Variables Below
+
+projectid = '<GCP ProjID>'
 userpass = '<clientid>:<clientsecret>'
 encoded_u = base64.b64encode(userpass.encode()).decode()
 
@@ -39,7 +43,8 @@ def get_okta_token():
 
     data = {'grant_type': 'client_credentials'}
     
-
+    # Update the Okta Issuer URI please keep /v1/token as is
+    
     response = requests.post('<Okta Web App end Point/Issuer URI>/v1/token',
                              headers=headers, cookies=cookies, data=data)
     response.raise_for_status()
@@ -52,16 +57,20 @@ def get_okta_token():
 if __name__ == '__main__':
     print("Running main")
     get_okta_token()
-    # For service account credentials
+    
+    # Reading client-config.json
     file = open('client-config.json')
     json_config_info = json.loads(file.read())
+    #credentials  = google.auth.default(scopes=scopes)
+    credentials = identity_pool.Credentials.from_info(json_config_info)
+    
     #print(json_config_info)
     scopes = ['https://www.googleapis.com/auth/devstorage.full_control',
               'https://www.googleapis.com/auth/devstorage.read_only', 'https://www.googleapis.com/auth/devstorage.read_write']
-    #credentials  = google.auth.default(scopes=scopes)
-    credentials = identity_pool.Credentials.from_info(json_config_info)
+    
+    
     scoped_credentials = credentials.with_scopes(scopes)
-    project = 'yadavaja-sandbox'
+    project = projectid
     list_buckets(project, scoped_credentials)
     #list_buckets(project, credentials)
     print("Removing Okta token file")
