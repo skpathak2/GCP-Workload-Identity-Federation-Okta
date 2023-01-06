@@ -14,6 +14,12 @@ GCP APIs.
 Using workload identity federation can help you
 [reduce the number of credentials that require rotation](https://cloud.google.com/iam/docs/best-practices-for-using-workload-identity-federation#reduce-number-of-credentials)
 
+
+Please also refer to the unaffiliated comprehensive guide below
+[UNDERSTANDING WORKLOAD IDENTITY FEDERATION](https://blog.salrashid.dev/articles/2021/understanding_workload_identity_federation/)
+[GCP WORKLOAD IDENTITY FEDERATION USING SAML](https://blog.salrashid.dev/articles/2022/gcpcompat-saml/)
+
+
 ## Best Practices for Service Accounts
 
 * Allow naming and documentation conventions.
