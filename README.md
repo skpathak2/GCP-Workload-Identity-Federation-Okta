@@ -16,7 +16,9 @@ Using workload identity federation can help you
 
 
 Please also refer to the unaffiliated comprehensive guide below
+
 [UNDERSTANDING WORKLOAD IDENTITY FEDERATION](https://blog.salrashid.dev/articles/2021/understanding_workload_identity_federation/)
+
 [GCP WORKLOAD IDENTITY FEDERATION USING SAML](https://blog.salrashid.dev/articles/2022/gcpcompat-saml/)
 
 
